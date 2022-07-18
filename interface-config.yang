@@ -1,0 +1,18 @@
+module interface-config {
+    namespace "urn:interface-config:API-Kurs";
+    prefix "if";
+
+    container interfaces {
+
+        list interface {
+            key "name";
+                leaf name {type string;
+                mandatory true;
+                }
+            leaf speed {type uint16;}
+            leaf mtu {type uint16;}
+            leaf ip-address {type string;}
+            leaf admin-up {type boolean;}
+        }
+    }
+}

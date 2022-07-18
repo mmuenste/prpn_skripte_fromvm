@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<data xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <interfaces xmlns="urn:interface-config:API-Kurs">
+    <interface>
+      <name>GigabitEthernet0/0</name>
+      <speed>1000</speed>
+      <mtu>1500</mtu>
+      <ip-address>10.10.1.1/24</ip-address>
+      <admin-up>True</admin-up>
+    </interface>
+    <interface>
+      <name>GigabitEthernet0/1</name>
+      <speed>1000</speed>
+      <mtu>1500</mtu>
+      <ip-address>10.10.2.1/24</ip-address>
+      <admin-up>False</admin-up>
+    </interface>
+  </interfaces>
+</data>
