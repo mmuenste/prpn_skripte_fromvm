@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "83939c7a-0808-47ee-a54e-6dc7f65e6905",
+		"name": "RKI_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Germany",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rki_base}}/germany",
+					"host": [
+						"{{rki_base}}"
+					],
+					"path": [
+						"germany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "States",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rki_base}}/states/RP",
+					"host": [
+						"{{rki_base}}"
+					],
+					"path": [
+						"states",
+						"RP"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rki_base}}/districts/06413",
+					"host": [
+						"{{rki_base}}"
+					],
+					"path": [
+						"districts",
+						"06413"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"value": "",
+			"type": "default",
+			"disabled": true
+		},
+		{
+			"key": "rki_base",
+			"value": "https://api.corona-zahlen.org",
+			"type": "default"
+		}
+	]
+}

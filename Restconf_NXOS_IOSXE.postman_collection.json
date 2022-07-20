@@ -1,0 +1,264 @@
+{
+	"info": {
+		"_postman_id": "7f2d2007-bc34-4dc4-903e-9f0ad1272e64",
+		"name": "Restconf_NXOS_IOSXE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET_interface",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "L1nux_dc",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "student",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang.data+json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://{{nxos}}/restconf/data/openconfig-interfaces:interfaces/interface=eth1%2F54/config/description",
+					"protocol": "https",
+					"host": [
+						"{{nxos}}"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-interfaces:interfaces",
+						"interface=eth1%2F54",
+						"config",
+						"description"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change_Description",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "L1nux_dc",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "student",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang.data+json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/yang.data+json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"Link_to_somewhere_else\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{nxos}}/restconf/data/openconfig-interfaces:interfaces/interface=eth1%2F54/config/",
+					"protocol": "https",
+					"host": [
+						"{{nxos}}"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-interfaces:interfaces",
+						"interface=eth1%2F54",
+						"config",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Web_Host_Meta_Data",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "L1nux_dc",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "student",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.181.11/.well-known/host-meta",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"181",
+						"11"
+					],
+					"path": [
+						".well-known",
+						"host-meta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Capabilities_CSR1000v",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "L1nux_dc",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "student",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://192.168.181.11/restconf/data/ietf-restconf-monitoring:restconf-state/capabilities",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"181",
+						"11"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"ietf-restconf-monitoring:restconf-state",
+						"capabilities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "YANG_library_CSR1000v",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "L1nux_dc",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "student",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://192.168.181.11/restconf/data/ietf-yang-library:modules-state",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"181",
+						"11"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"ietf-yang-library:modules-state"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "nxos",
+			"value": "192.168.181.21",
+			"type": "default"
+		}
+	]
+}
